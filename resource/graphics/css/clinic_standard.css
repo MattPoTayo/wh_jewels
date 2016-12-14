@@ -1,0 +1,204 @@
+body
+{
+	background:#E8E4E4;
+	margin: 0px 2% 0px 2%;
+	font-family: helvetica;
+	font-size:12px;
+}
+
+h3, h4
+{
+	font-family:Pacifico;
+}
+
+.banner
+{
+	background:#000508;
+	color:#FEFFF8;
+	width:100%;
+	margin:-10px 0px 10px 0px;
+	padding:10px 15px 0px 5px;
+}
+
+.banner-left
+{
+}
+
+.banner-right
+{
+	padding-top:2px;
+	text-align:right;
+	font-size:12px;
+}
+
+.banner-right a
+{
+	color:white;
+}
+
+
+.fsuccess
+{
+	text-align:center;
+	font-size:15px;
+	font-weight:bold;
+	color:green;
+}
+
+.ffail
+{
+	text-align:center;
+	font-size:15px;
+	font-weight:bold;
+	color:red;
+}
+
+.table-wrapper
+{
+	width:100%;
+	font-size:12px;
+}
+
+.selecttable
+{
+	font-size:12px;
+	margin-top:15px;
+}
+
+.table-cart
+{
+	font-size:12px;
+	margin: 15px 0px 0px 0px;
+	border: 2px solid black;
+}
+
+.table-finalize
+{
+	font-size:12px;
+	margin: 15px 0px 15px 0px;
+	border: 2px solid black;
+}
+
+.form_class
+{
+	margin:10px auto 5px auto;
+	max-width:500px;
+	background:white;
+	border-radius: 5px;
+}
+
+
+.form_class_full
+{
+	margin:10px auto 5px auto;
+	max-width:80%;
+	background:white;
+	border-radius: 5px;
+}
+
+.form_class_full2
+{
+	margin:10px auto 0px auto;
+	width:100%;
+	background:white;
+	border-radius: 5px;
+}
+
+.form_title
+{
+	background:#212121;
+	color:white;
+	text-align:center;
+	padding: 2px 0px 1px 0px;
+	
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-top-right-radius: 5px;
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-topright: 5px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px
+}
+
+.form_content
+{
+	padding:10px 10px 2px 10px;
+	background:white;
+}
+
+.form_button
+{
+	border-radius: 5px;
+	width:100%;
+	height:40px;
+	text-align:center;
+	background:#212121;
+	color:white;
+}
+
+.transaction_button
+{
+	border-radius: 5px;
+	width:100%;
+	height:35px;
+	text-align:center;
+	background:#212121;
+	color:white;
+}
+
+.add_button
+{
+	border-radius: 5px;
+	width:100%;
+	max-width:200px;
+	height:35px;
+	text-align:center;
+	background:#212121;
+	color:white;
+	margin:10px 0px 10px auto;
+}
+
+
+.form_class_view
+{
+	margin: 0px 1% 0px 1%;
+	background:white;
+	border-radius: 5px;
+}
+
+.form_title_view
+{
+	background:#212121;
+	color:white;
+	text-align:center;
+	padding: 2px 0px 2px 0px;
+	
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-top-right-radius: 5px;
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-topright: 5px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px
+}
+
+.form_content_view
+{
+	padding:10px 10px 5px 10px;
+	background:white;
+}
+
+.view_button
+{
+	border-radius: 5px;
+	width:100%;
+	height:35px;
+	text-align:center;
+	background:#119EEF;
+	color:white;
+}
+
+
+.details
+{
+	font-size:15px;
+	font-weight:bold;
+}
