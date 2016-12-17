@@ -55,7 +55,7 @@
 			?>
         		<div class="col-lg-12">
                 		<div class="panel panel-default">
-                			<div class="panel-heading"><i class="fa fa-bullhorn fa-fw"></i>   Message from Tangent</div>                       				 
+                			<div class="panel-heading"><i class="fa fa-bullhorn fa-fw"></i>   Message from Developer</div>                       				 
                 			<div class="panel-body">
                 				<div>
                 					<?php

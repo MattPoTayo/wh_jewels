@@ -48,7 +48,7 @@
 				<li><a href='payments_new.php'>New Payment</a></li>
 			</ul>
 		</li>
-		<li <?php if($page_type==8) echo "class='active has-sub'"; else echo "class='has-sub'"; ?> ><a href='#'>myTangent</a>
+		<li <?php if($page_type==8) echo "class='active has-sub'"; else echo "class='has-sub'"; ?> ><a href='#'>User</a>
 			<ul>
 				<li><a href='about_profile.php'>My Profile</a></li>
 				<li><a href='about.php'>About</a></li>
