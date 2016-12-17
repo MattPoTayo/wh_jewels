@@ -80,7 +80,7 @@
 								else
 									header("location:inventory.php");
 							}
-							else echo "<p class='ffail'> Oops, something went wrong. If error persists, please contact Tangent.</p>";
+							else echo "<p class='ffail'> Oops, something went wrong. If error persists, please contact support.</p>";
 						}
 					?>
 				</div>

@@ -322,7 +322,7 @@
 					</tr>
 				</table>
 				
-				<p style="font-size:10px"><a href="transactions.php">WH Jewels &reg WH Jewels Inventory Management System</a><br>Developed by Tangent PH<br>www.TangentPH.com | www.fb.com/TangentPH</p>
+				<p style="font-size:10px"><a href="transactions.php">WH Jewels &reg WH Jewels Inventory Management System</a></p>
 			</div>
 		</div>
 	</main>

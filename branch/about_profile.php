@@ -65,7 +65,7 @@
 							{
 								$new = mysqli_query($mysqli, "UPDATE `entity` SET `Name` = '$name', `Birthdate` = '$birthdate', `Phone` = '$phone', `Address` = '$address', `Username` = '$username', `Password` = '$password1' WHERE `ID` = '$userID'");
 								if($new) echo "<p class='fsuccess'> Successfully updated profile.</p>";
-								else echo "<p class='ffail'> Oops, something went wrong. If error persists, please contact Tangent.</p>";
+								else echo "<p class='ffail'> Oops, something went wrong. If error persists, please contact support.</p>";
 							}
 						}
 					?>

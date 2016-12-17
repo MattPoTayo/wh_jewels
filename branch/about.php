@@ -52,7 +52,7 @@
                 			<div class="panel-heading"><i class="fa fa-bell fa-fw"></i>   Terms and Condition</div>                       				 
                 			<div class="panel-body">
                 				This system was first implemented by Tangent PH, later on tranfer all controls and privilages to client company <strong>WH JEWELS</strong>. All upcoming developments will be automatically credited to this company with proper turnover protocols from first provider.<br><br>
-                				Development can be monitored via git repository hosted <a href="http://www.tangentph.com/terms.html" target="_blank">here</a>.
+                				Development can be monitored via git repository hosted <a href="https://github.com/MattPoTayo/wh_jewels" target="_blank">here</a>.
                 			</div>
                 		</div>
                 	</div>
