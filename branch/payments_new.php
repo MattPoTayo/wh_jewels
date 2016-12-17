@@ -45,7 +45,7 @@
 											     VALUES ('', '$type', '$date', '$amount', '$cbank', '$cdate', '$client', '$sid', 1, '$cnum')");
 											      
 								if($new) $_SESSION['success'] = "Successfully added new payment. Click <a href='payment_new.php'>here</a> to add another one.";
-								else $_SESSION['fail'] = "Oops, something went wrong. If error persists, please contact Tangent.";
+								else $_SESSION['fail'] = "Oops, something went wrong. If error persists, please contact support.";
 								
 								ob_end_clean();
 								header("location:payments.php");

@@ -18,7 +18,7 @@
 				$delete = mysqli_query($mysqli, "UPDATE payment SET Mark = -1 WHERE ID = '$payment'");
 				
 				if($delete) $_SESSION['success'] = "Successfully deleted payment.";
-				else $_SESSION['fail'] = "Error occured. If error persists, please contact Tangent.";
+				else $_SESSION['fail'] = "Error occured. If error persists, please contact support.";
 				
 				ob_end_clean();
 				header("location:payments.php");

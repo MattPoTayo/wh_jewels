@@ -3,8 +3,8 @@
 	
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Thinking Dentist 1.0 Tangent Dental Records Management System">
-	<meta name="author" content="Tangent PH">
+	<meta name="description" content="Thinking Dentist 1.0 WH Jewels Dental Records Management System">
+	<meta name="author" content="MattPoTayo">
 	
 	<!-- BOOTSTRAP -->
 	<link href="resource/graphics/bootstrap/css/bootstrap.min.css" rel="stylesheet">

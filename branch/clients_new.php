@@ -45,7 +45,7 @@
 											      VALUES ('', '$name', '$address', '$phone', '', '$username', '', '1', '4', '1')");
 											      
 								if($new) $_SESSION['success'] = "Successfully added new client. Click <a href='clients_new.php'>here</a> to add another one.";
-								else $_SESSION['fail'] = "Oops, something went wrong. If error persists, please contact Tangent.";
+								else $_SESSION['fail'] = "Oops, something went wrong. If error persists, please contact support.";
 								
 								ob_end_clean();
 								header("location:clients.php");

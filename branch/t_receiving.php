@@ -42,7 +42,7 @@
 				if($delete_connection AND $delete_inventory)
 					$_SESSION['success'] = "iID No. ".$inventory." successfully deleted.";
 				else
-					$_SESSION['fail'] = "iID No. ".$inventory." delete failed. Please contact Tangent if error persists.";
+					$_SESSION['fail'] = "iID No. ".$inventory." delete failed. Please contact support if error persists.";
 				ob_end_clean();
 				header("location:t_receiving.php");
 			}
@@ -69,7 +69,7 @@
 				}
 				else
 				{
-					$_SESSION['fail'] = "Failed to finalize. Please contact Tangent if error persists.";
+					$_SESSION['fail'] = "Failed to finalize. Please contact support if error persists.";
 				}
 			}
 			

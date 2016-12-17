@@ -24,7 +24,7 @@
                 			<div class="panel-heading"><i class="fa fa-bell fa-fw"></i>   About WH Jewels Inventory System</div>                       				 
                 			<div class="panel-body">
                 				System Name: WH Jewels 1.0<br>
-                				System Version: 1.0.0<br>
+                				System Version: 1.1.0<br>
                 				Date of Launch: N.A.<br>
                 				Last Day of Coding: November 4, 2016<br>
                 				Hosting Plan: Basic X<br>
@@ -37,14 +37,12 @@
                 	</div>
         		<div class="col-lg-8">
                 		<div class="panel panel-default">
-                			<div class="panel-heading"><i class="fa fa-bell fa-fw"></i>   Contact Tangent</div>                       				 
+                			<div class="panel-heading"><i class="fa fa-bell fa-fw"></i>   Contact Support</div>                       				 
                 			<div class="panel-body">
                 				For any questions or clarification, please contact us through the following channel:<br><br>
-						Facebook: www.facebook.com/TangentPH (We typically reply within minutes)<br>
-						Twitter: @Tangent_PH<br>
-						Text Message: +63 918 521 8388<br>
-						Email: connect@tangentPH.com<br>
-						Online Ticket: http://www.tangentph.com/#contact
+						Text/Viber Message: +63 905 880 0741<br>
+						Email: matthew.tizon@gmail.com<br>
+                                                Skype: matt.nelsoft@gmail.com
                 			</div>
                 		</div>
                 	</div>
@@ -53,8 +51,8 @@
                 		<div class="panel panel-default">
                 			<div class="panel-heading"><i class="fa fa-bell fa-fw"></i>   Terms and Condition</div>                       				 
                 			<div class="panel-body">
-                				This system was developed by <strong>Tangent PH</strong> operating under the legal name, Tangent Software Solutions. No part of the system can be replicated nor copied without proper permission from Tangent PH.<br><br>
-                				Please read our terms, policies and condition found <a href="http://www.tangentph.com/terms.html" target="_blank">here</a>.
+                				This system was first implemented by Tangent PH, later on tranfer all controls and privilages to client company <strong>WH JEWELS</strong>. All upcoming developments will be automatically credited to this company with proper turnover protocols from first provider.<br><br>
+                				Development can be monitored via git repository hosted <a href="https://github.com/MattPoTayo/wh_jewels" target="_blank">here</a>.
                 			</div>
                 		</div>
                 	</div>
