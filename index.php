@@ -24,8 +24,8 @@
 							if($_POST)
 							{
 								$username = $mysqli->real_escape_string($_POST['username']);
-								$password = $mysqli->real_escape_string($_POST['password']);
-								
+								$password = $mysqli->real_escape_string(md5 ($_POST['password']));
+								#echo(md5($_POST['password']));
 								$user = mysqli_query($mysqli, "SELECT * FROM entity WHERE `Username` = '$username' AND `Password` = '$password' AND `Mark` = 1");
 								
 								if(!$user or mysqli_num_rows($user) != 1) 
