@@ -1,5 +1,5 @@
 <div class="banner">
-	<div class="col-md-6 banner-left"><h4>WH Jewels</h4></div>
+	<div class="col-md-6 banner-left"><h4><img src="/resource/images/wh_jewels_icon.png" alt="Banner Image"/>WH Jewels</h4></div>
 	<div class="col-md-6 banner-right">
 		<?php 
 			require_once("../resource/database/hive.php");

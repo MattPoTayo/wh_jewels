@@ -10,7 +10,7 @@
 		<div>
 			<div>
 				<div class="form-centered-login">
-					<div class="form_title"><h1 class="logo_font">WH Jewels</h1></div>
+					<div class="form_title"><h1 class="logo_font"><img src="/resource/images/wh_jewels_cover.png" height="70" alt="Banner Image"/>WH Jewels</h1></div>
 					<div>
 						<?php
 							require_once("resource/database/hive.php");
