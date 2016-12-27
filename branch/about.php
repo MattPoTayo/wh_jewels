@@ -23,7 +23,7 @@
                 		<div class="panel panel-default">
                 			<div class="panel-heading"><i class="fa fa-bell fa-fw"></i>   About WH Jewels Inventory System</div>                       				 
                 			<div class="panel-body">
-                                                <div id="main" style="width: 340px; height: 200px;background-position:center;background-repeat:no-repeat;background-image:url('/resource/images/wh_jewels_cover.png')">
+                                                <div id="main" style="width: 340px; height: 200px;background-position:center;background-repeat:no-repeat;background-image:url('../resource/images/wh_jewels_cover.png')">
 
                                                 </div>
                 				System Name: WH Jewels 1.0<br>
