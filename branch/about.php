@@ -27,7 +27,7 @@
 
                                                 </div>
                 				System Name: WH Jewels 1.0<br>
-                				System Version: 1.1.1<br>
+                				System Version: 2.0.0<br>
                 				Date of Launch: N.A.<br>
                 				Last Day of Coding: November 4, 2016<br>
                 				Hosting Plan: Basic X<br>
