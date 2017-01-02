@@ -24,7 +24,7 @@
                 			<div class="panel-heading"><i class="fa fa-bell fa-fw"></i>   About WH Jewels Inventory System</div>                       				 
                 			<div class="panel-body">
                 				System Name: WH Jewels 1.0<br>
-                				System Version: 1.1.0<br>
+                				System Version: 1.1.1<br>
                 				Date of Launch: N.A.<br>
                 				Last Day of Coding: November 4, 2016<br>
                 				Hosting Plan: Basic X<br>
