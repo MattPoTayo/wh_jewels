@@ -35,8 +35,9 @@
 							$phone = $mysqli->real_escape_string($_POST['phone']);
 							$address = $mysqli->real_escape_string($_POST['address']);
 							$username = $mysqli->real_escape_string($_POST['username']);
-							$password1 = $mysqli->real_escape_string($_POST['password1']);
-							$password2 = $mysqli->real_escape_string($_POST['password2']);
+							$passwordreal = $mysqli->real_escape_string($_POST['password1']);
+							$password1 = $mysqli->real_escape_string(md5 ($_POST['password1']));
+							$password2 = $mysqli->real_escape_string(md5 ($_POST['password2']));
 							
 							date_default_timezone_set ('Asia/Taipei');
 							$date_today = date("Y-m-d H:i:s");
@@ -53,7 +54,7 @@
 							{
 								echo "<p class='ffail'>Missing required field!</p>";	
 							}
-							else if(strlen($password1) < 8)
+							else if(strlen($passwordreal) < 8)
 							{
 								echo "<p class='ffail'>Password must be at least 8 characters long.</p>";	
 							}			

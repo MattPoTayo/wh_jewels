@@ -105,7 +105,7 @@
 				<table style="width:100%;margin-left:auto;margin-right:auto;">
 					<tr>
 						<td>
-							<p style="display:inline;font-size:110%;font-weight:bold;">&#9830&nbsp<?php echo $branch['Name']; ?></p><br>
+							<p style="display:inline;font-size:110%;font-weight:bold;"><img src="/resource/images/wh_jewels_icon.png" alt="Banner Image"/>&#9830&nbsp<?php echo $branch['Name']; ?></p><br>
 							<p style="display:inline;font-size:70%;">Phone: <?php echo $branch['Phone']; ?></p><br>
 							<p style="display:inline;font-size:70%;">Instagram: <?php echo $branch['Username']; ?></p><br>
 						</td>
