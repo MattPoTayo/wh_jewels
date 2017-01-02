@@ -193,7 +193,7 @@
 			<div class="table-wrapper">
 		        	<table id="patients3" class="display responsive nowrap selecttable" cellspacing="0" width="100%">
 					<?php
-						$result = mysqli_query($mysqli, "SELECT `ID`, `Name`, `Category`, `Subcategory`, `Description`, `Weight`, `Buy`, `Sell`, `Picture`, `Mark` FROM `inventory` WHERE `Mark` = '4'");
+						$result = mysqli_query($mysqli, "SELECT `ID`, `Name`, `Category`, `Subcategory`, `Description`, `Weight`, `Buy`, `Sell`, `Mark` FROM `inventory` WHERE `Mark` = '4'");
 						
 						echo '<thead>';
 						echo '<tr style="text-align:center;font-weight:bold;">';
@@ -210,7 +210,7 @@
 						{	
 							$result->data_seek($i);
 			    				$row = $result->fetch_row();
-			    				
+			    				$path = "value";
 			    				$mine = mysqli_query($mysqli, "SELECT `Destination` FROM transaction, particular WHERE Inventory = $row[0] AND transaction.Mark = 1 AND particular.Mark = 1 AND Transaction = transaction.ID ORDER BY Transaction DESC LIMIT 1");
 			    				$mine = mysqli_fetch_row($mine);
 			    				
@@ -222,7 +222,9 @@
 								echo '<td>'.sprintf('%05d', $row[0]).'</td>';
 								
 								//Picture
-								echo '<td><img style="width:30px;" src="data:image/jpeg;base64,'.base64_encode( $row[8] ).'"/></td>';
+								$path =  "../resource/images/inv_image/".sprintf('%d', $row[0]).".png";
+								//echo $path;
+								echo '<td><img style="width:30px;" src="'.$path.'"/></td>';
 								
 								//Name
 								echo '<td>'.ucwords(strtolower($row[1])).'</td>';
