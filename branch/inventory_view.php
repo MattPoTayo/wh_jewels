@@ -1,9 +1,11 @@
 <?php
 	$id = $_GET['id'];
-	
+	$path = "../resource/images/inv_image/".sprintf('%d', $id).".png";
+	/*
 	require_once("../resource/database/hive.php");
-	$result = mysqli_query($mysqli, "SELECT `Picture` FROM `inventory` WHERE `ID` = $id");
+	$result = mysqli_query($mysqli, "SELECT `ID` FROM `inventory` WHERE `ID` = $id");
 	$picture = mysqli_fetch_row($result);	
+	*/
 				
-	echo '<img src="data:image/jpeg;base64,'.base64_encode( $picture[0] ).'"/>';
+	echo '<img src="'.$path.'"/>';
 ?>

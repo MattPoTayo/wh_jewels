@@ -53,7 +53,6 @@ CREATE TABLE `inventory` (
   `Weight` decimal(10,2) NOT NULL,
   `Buy` decimal(10,2) NOT NULL,
   `Sell` decimal(10,2) NOT NULL,
-  `Picture` longblob NOT NULL,
   `Mark` int(11) NOT NULL,
   PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=574 DEFAULT CHARSET=latin1;

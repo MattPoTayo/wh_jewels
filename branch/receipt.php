@@ -105,7 +105,8 @@
 				<table style="width:100%;margin-left:auto;margin-right:auto;">
 					<tr>
 						<td>
-							<p style="display:inline;font-size:110%;font-weight:bold;"><img src="/resource/images/wh_jewels_icon.png" alt="Banner Image"/>&#9830&nbsp<?php echo $branch['Name']; ?></p><br>
+							<p style="display:inline;font-size:110%;font-weight:bold;"><img src="../resource/images/wh_jewels_icon.png" alt="Banner Image"/>
+							<?php echo $branch['Name']; ?></p><br>
 							<p style="display:inline;font-size:70%;">Phone: <?php echo $branch['Phone']; ?></p><br>
 							<p style="display:inline;font-size:70%;">Instagram: <?php echo $branch['Username']; ?></p><br>
 						</td>
@@ -197,8 +198,9 @@
 						<td style="width:10%"><?php if($type[0] == 1) echo "Amount in $"; else echo "Amount in PHP"; ?></td>
 					</tr>
 					<?php		 
-						$result = mysqli_query($mysqli, "SELECT inventory.ID, Name, Category, Description, Weight, Picture, Amount FROM particular, inventory WHERE particular.Transaction = '$creation' AND inventory.ID = particular.Inventory AND particular.Mark > 0");
-							 
+						$result = mysqli_query($mysqli, "SELECT inventory.ID, Name, Category, Description, Weight, Amount FROM particular, inventory WHERE particular.Transaction = '$creation' AND inventory.ID = particular.Inventory AND particular.Mark > 0");
+						//echo("SELECT inventory.ID, Name, Category, Description, Weight, Picture, Amount FROM particular, inventory WHERE particular.Transaction = '$creation' AND inventory.ID = particular.Inventory AND particular.Mark > 0");
+						$path = "value";
 						for($i=0, $total=0; $i < mysqli_num_rows($result); $i++)
 						{	
 							echo '<tr style="text-align:center;">';
@@ -208,7 +210,10 @@
 			    				echo "<tr style='text-align:center'>";
 			    				
 							//Picture
-							echo '<td><img style="width:70px;" src="data:image/jpeg;base64,'.base64_encode( $row[5] ).'"/></td>';
+			    			$path = "../resource/images/inv_image/".sprintf('%d', $row[0]).".png";
+							echo '<td><img style="width:70px;" src="'.$path.'"/></td>';
+							//echo "<br>";
+							//echo $path;
 			    				
 			    				//ID
 							echo '<td><img style="margin-top:10px" alt="testing" src="../resource/tools/barcodes.php?text='.sprintf('%05d', $row[0]).'&print=true&size=40" /></td>';
@@ -226,9 +231,9 @@
 							echo '<td>'.$row[4].' g</td>';
 							
 							//Amount
-							if($type[0] == 1) { echo '<td>$ '.number_format($row[6],2).'<br>(&#8369 '.number_format(($row[6]*$conversion),2).')</td>'; }
-							else echo '<td>'.number_format($row[6],2).'</td>';
-							$total += $row[6];
+							if($type[0] == 1) { echo '<td>$ '.number_format($row[6],2).'<br>(&#8369 '.number_format(($row[5]*$conversion),2).')</td>'; }
+							else echo '<td>'.number_format($row[5],2).'</td>';
+							$total += $row[5];
 							
 							echo '</tr>';
 						}

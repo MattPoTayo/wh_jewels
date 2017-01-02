@@ -113,10 +113,12 @@
 				$description = $mysqli->real_escape_string($_POST['description']);
 				$weight = $mysqli->real_escape_string($_POST['weight']);
 				$price= $mysqli->real_escape_string($_POST['price']);
-				$imagetmp=addslashes (file_get_contents($_FILES['img']['tmp_name']));
-				
-				$newInventory = mysqli_query($mysqli, "INSERT INTO `inventory`(`ID`, `Name`, `Category`, `Subcategory`, `Description`, `Weight`, `Buy`, `Sell`, `Picture`, `Mark`) VALUES ('', '$name', '$category', '', '$description', '$weight', '$price', '', '$imagetmp', '2')");
+				//$imagetmp=addslashes (file_get_contents($_FILES['img']['tmp_name']));
+				$tmp_name = $_FILES['img']['tmp_name'];
+				$newInventory = mysqli_query($mysqli, "INSERT INTO `inventory`(`ID`, `Name`, `Category`, `Subcategory`, `Description`, `Weight`, `Buy`, `Sell`, `Mark`) VALUES ('', '$name', '$category', '', '$description', '$weight', '$price', '', '2')");
 				$new_inventory = $mysqli->insert_id;
+
+				move_uploaded_file($tmp_name, "../resource/images/inv_image/$new_inventory.png");
 				$newConnection = mysqli_query($mysqli, "INSERT INTO `particular`(`ID`, `Transaction`, `Inventory`, `Type`, `Amount`, `Mark`) VALUES ('', '$sid', '$new_inventory', '5', '$price', 2)");
 			
 				$_SESSION['success'] = "Successfully added new item.";
@@ -255,7 +257,7 @@
 				<div class="selecttable" style="width:98%;margin-left:1%">
 			        	<table class="table table-bordered table-stripped" style="font-size:12px;width:100%">
 					<?php
-						$result = mysqli_query($mysqli, "SELECT inventory.ID, Name, Category, Description, Weight, Picture, Amount FROM particular, inventory WHERE particular.Transaction = '$sid' AND inventory.ID = particular.Inventory AND particular.Mark > 0");
+						$result = mysqli_query($mysqli, "SELECT inventory.ID, Name, Category, Description, Weight, Amount FROM particular, inventory WHERE particular.Transaction = '$sid' AND inventory.ID = particular.Inventory AND particular.Mark > 0");
 						
 						echo '<thead>';
 						echo '<tr style="text-align:center;font-weight:bold;background:black;color:white">';
@@ -277,7 +279,8 @@
 			    				echo "<tr style='text-align:center'>";
 			    				
 			    				//Picture
-							echo '<td><img style="width:20px;" src="data:image/jpeg;base64,'.base64_encode( $row[5] ).'"/></td>';
+			    			$path = "../resource/images/inv_image/".sprintf('%d', $row[0]).".png";
+							echo '<td><img style="width:20px;" src="'.$path.'"/></td>';
 			    				
 			    				//ID
 							echo '<td>'.sprintf('%05d', $row[0]).'</td>';
@@ -295,8 +298,8 @@
 							echo '<td>'.$row[4].'</td>';
 							
 							//Amount
-							echo '<td>'.number_format($row[6],2).'</td>';
-							$total += $row[6];
+							echo '<td>'.number_format($row[5],2).'</td>';
+							$total += $row[5];
 							
 							//Delete
 							echo '<td><a href="t_repair.php?delete='.$row[0].'">Delete</a></td>';

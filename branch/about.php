@@ -23,11 +23,11 @@
                 		<div class="panel panel-default">
                 			<div class="panel-heading"><i class="fa fa-bell fa-fw"></i>   About WH Jewels Inventory System</div>                       				 
                 			<div class="panel-body">
-                                                <div id="main" style="width: 340px; height: 200px;background-position:center;background-repeat:no-repeat;background-image:url('/resource/images/wh_jewels_cover.png')">
+                                                <div id="main" style="width: 340px; height: 200px;background-position:center;background-repeat:no-repeat;background-image:url('../resource/images/wh_jewels_cover.png')">
 
                                                 </div>
                 				System Name: WH Jewels 1.0<br>
-                				System Version: 1.1.1<br>
+                				System Version: 2.0.0<br>
                 				Date of Launch: N.A.<br>
                 				Last Day of Coding: November 4, 2016<br>
                 				Hosting Plan: Basic X<br>
