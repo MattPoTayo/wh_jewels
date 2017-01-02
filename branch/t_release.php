@@ -198,7 +198,7 @@
 				<div class="selecttable" style="width:98%;margin-left:1%">
 			        	<table class="table table-bordered table-stripped" style="font-size:12px;width:100%">
 					<?php
-						$result = mysqli_query($mysqli, "SELECT inventory.ID, Name, Category, Description, Weight, Picture, Amount FROM particular, inventory WHERE particular.Transaction = '$sid' AND inventory.ID = particular.Inventory AND particular.Mark > 0");
+						$result = mysqli_query($mysqli, "SELECT inventory.ID, Name, Category, Description, Weight, Amount FROM particular, inventory WHERE particular.Transaction = '$sid' AND inventory.ID = particular.Inventory AND particular.Mark > 0");
 						
 						echo '<thead>';
 						echo '<tr style="text-align:center;font-weight:bold;background:black;color:white">';
@@ -248,7 +248,8 @@
 			    				echo "<tr style='text-align:center'>";
 			    				
 			    				//Picture
-							echo '<td><img style="width:20px;" src="data:image/jpeg;base64,'.base64_encode( $row[5] ).'"/></td>';
+			    			$path = "../resource/images/inv_image/".sprintf('%d', $row[0]).".png";
+							echo '<td><img style="width:20px;" src="'.$path.'"/></td>';
 			    				
 			    				//ID
 							echo '<td>'.sprintf('%05d', $row[0]).'</td>';
@@ -266,8 +267,8 @@
 							echo '<td>'.$row[4].'</td>';
 							
 							//Amount
-							echo '<td>'.number_format($row[6],2).'</td>';
-							$total += $row[6];
+							echo '<td>'.number_format($row[5],2).'</td>';
+							$total += $row[5];
 							
 							//Delete
 							echo '<td><a href="t_receiving.php?delete='.$row[0].'">Delete</a></td>';

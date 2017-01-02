@@ -55,7 +55,7 @@
 					<?php
 						require_once("../resource/database/hive.php");
 						
-						$result = mysqli_query($mysqli, "SELECT `ID`, `Name`, `Category`, `Subcategory`, `Description`, `Weight`, `Buy`, `Sell`, `Picture`, `Mark` FROM `inventory`");
+						$result = mysqli_query($mysqli, "SELECT `ID`, `Name`, `Category`, `Subcategory`, `Description`, `Weight`, `Buy`, `Sell`, `Mark` FROM `inventory`");
 					
 						echo '<thead>';
 						echo '<tr style="text-align:center;font-weight:bold;">';
@@ -94,13 +94,13 @@
 							echo '<td>'.$row[5].' g</td>';
 							
 							//Type
-							if($row[9] == 1) echo '<td>Available</td>';
-							else if($row[9] == 2) echo '<td>In Cart</td>';
-							else if($row[9] == 3) echo '<td>Sold</td>';
-							else if($row[9] == 4) echo '<td>Borrowed</td>';
-							else if($row[9] == 5) echo '<td>Repair Request</td>';
-							else if($row[9] == 6) echo '<td>Repair Released</td>';
-							else if($row[9] < 1) echo '<td>Deleted</td>';
+							if($row[8] == 1) echo '<td>Available</td>';
+							else if($row[8] == 2) echo '<td>In Cart</td>';
+							else if($row[8] == 3) echo '<td>Sold</td>';
+							else if($row[8] == 4) echo '<td>Borrowed</td>';
+							else if($row[8] == 5) echo '<td>Repair Request</td>';
+							else if($row[8] == 6) echo '<td>Repair Released</td>';
+							else if($row[8] < 1) echo '<td>Deleted</td>';
 							
 							//Actions
 							echo '<td><a href="inventory_history.php?id='.$row[0].'" target="_blank"><i class="fa fa-history-o" aria-hidden="true"></i> History</a>&nbsp|&nbsp<a href="inventory_barcode.php?id='.$row[0].'&action=view&desc='.$row[4].'&name='.$row[1].'"><i class="fa fa-barcode" aria-hidden="true"></i> Print Barcode</a></td>';

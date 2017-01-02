@@ -59,9 +59,15 @@
                 			<div class="panel-body">
                 				<div>
                 					<?php
-                						$message = mysqli_query($mysqli, "SELECT Message FROM `messages` WHERE Type = 3 ORDER BY ID DESC LIMIT 1");
-                						$message = mysqli_fetch_row($message);
-                						echo "<strong>".$message[0]."</strong>";
+                						$message = mysqli_query($mysqli, "SELECT Message FROM `messages` WHERE Type = 3 ORDER BY ID");
+                						
+                						for($i=0, $total=0; $i < mysqli_num_rows($message); $i++)
+                						{	$message->data_seek($i);
+	                						$row = $message->fetch_row();
+	                						if($i > 0)
+	                							echo"<br>";
+	                						echo "<strong>".$row[0]."</strong>";
+                						}
                 					?>
                 				</div>
                 			</div>

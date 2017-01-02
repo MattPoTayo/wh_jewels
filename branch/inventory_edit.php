@@ -42,7 +42,7 @@
 							$description = $mysqli->real_escape_string($_POST['description']);
 							$weight = $mysqli->real_escape_string($_POST['weight']);
 							$imagetmp = addslashes (file_get_contents($_FILES['img']['tmp_name']));
-							
+							$tmp_name = $_FILES['img']['tmp_name'];
 							if(isset($_GET['sid']))
 							{	
 								//Update price
@@ -57,9 +57,11 @@
 							}
 							
 							if($imagetmp != "")
-								$edit = mysqli_query($mysqli, "UPDATE `inventory` SET `Name` = '$name', `Category` = '$category', `Description` = '$description', `Weight` = '$weight', `Picture` = '$imagetmp' WHERE `ID` = '$inventoryID'");
-							else
-								$edit = mysqli_query($mysqli, "UPDATE `inventory` SET `Name` = '$name', `Category` = '$category', `Description` = '$description', `Weight` = '$weight' WHERE `ID` = '$inventoryID'");								
+							{
+								move_uploaded_file($tmp_name, "../resource/images/inv_image/$inventoryID.png");
+							}
+							
+							$edit = mysqli_query($mysqli, "UPDATE `inventory` SET `Name` = '$name', `Category` = '$category', `Description` = '$description', `Weight` = '$weight' WHERE `ID` = '$inventoryID'");								
 							
 							if($edit) 
 							{
